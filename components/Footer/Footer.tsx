@@ -191,7 +191,7 @@ export const Footer: React.FC<FooterProps> = ({
               ].map((item, idx) => (
                 <li key={idx}>
                   <Link
-                    href="#about"
+                    href="/about"
                     className="group flex items-center gap-2.5 text-xs sm:text-sm text-slate-300/80 hover:text-white transition-all duration-200 py-0.5"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-sky-400/50 group-hover:bg-sky-400 group-hover:scale-125 transition-all duration-200 shrink-0" />

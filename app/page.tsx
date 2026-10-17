@@ -5,8 +5,8 @@ import { WelcomeSection } from '@/components/Welcome/WelcomeSection';
 import { AudienceSection } from '@/components/Audience/AudienceSection';
 import { WhyUsSection } from '@/components/WhyUs/WhyUsSection';
 import { ClientsAndCtaSection } from '@/components/Clients/ClientsAndCtaSection';
+import { ContactForm } from '@/components/Contact/ContactForm';
 import { Footer } from '@/components/Footer/Footer';
-import { Mail, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -76,38 +76,7 @@ export default function Home() {
             </p>
           </div>
 
-          <form className="max-w-xl mx-auto bg-white shadow-[0_12px_40px_rgba(7,31,61,0.08)] border border-slate-200/80 p-8 sm:p-10 rounded-3xl space-y-5">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Name</label>
-              <input
-                type="text"
-                placeholder="Your full name"
-                className="w-full bg-slate-50/80 hover:bg-slate-50 border border-slate-200 focus:border-sky-500 focus:bg-white rounded-xl px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:outline-none transition-all text-sm sm:text-base"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email</label>
-              <input
-                type="email"
-                placeholder="you@company.com"
-                className="w-full bg-slate-50/80 hover:bg-slate-50 border border-slate-200 focus:border-sky-500 focus:bg-white rounded-xl px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:outline-none transition-all text-sm sm:text-base"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Message</label>
-              <textarea
-                rows={4}
-                placeholder="How can we help?"
-                className="w-full bg-slate-50/80 hover:bg-slate-50 border border-slate-200 focus:border-sky-500 focus:bg-white rounded-xl px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:outline-none resize-none transition-all text-sm sm:text-base"
-              />
-            </div>
-            <button
-              type="button"
-              className="w-full btn-cut-br bg-[#5fa8d3] hover:bg-[#4a97c4] text-white font-medium py-3.5 transition-all shadow-md hover:shadow-lg active:translate-y-0.5 flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer"
-            >
-              <Mail className="w-4 h-4" /> Send Message
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 

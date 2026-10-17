@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 import { ArrowUp } from 'lucide-react';
 
@@ -15,6 +16,7 @@ interface SmoothScrollProps {
 }
 
 export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
+  const pathname = usePathname();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -51,31 +53,70 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     }
     animationFrameId = requestAnimationFrame(raf);
 
-    // Smooth anchor link navigation with fixed navbar offset
+    // Enhanced smooth section navigation with navbar offset
     const handleAnchorClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
       if (!anchor) return;
 
       const href = anchor.getAttribute('href');
-      if (href && href.startsWith('#') && href.length > 1) {
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-          e.preventDefault();
-          lenis.scrollTo(targetElement as HTMLElement, {
-            offset: -85,
-            duration: 1.25,
-          });
+      if (!href) return;
 
-          if (window.history.pushState) {
-            window.history.pushState(null, '', href);
+      const currentPath = window.location.pathname;
+
+      // Clicked Home while already on Home page -> smooth scroll to top
+      if (
+        (href === '/' || href === '/#home' || href === '#home') &&
+        (currentPath === '/' || currentPath === '')
+      ) {
+        e.preventDefault();
+        lenis.scrollTo(0, { offset: 0, duration: 1.2 });
+        if (window.history.pushState) {
+          window.history.pushState(null, '', '/');
+        }
+        return;
+      }
+
+      // Resolve section anchor targets on current page
+      let targetSelector: string | null = null;
+
+      if (href.startsWith('#') && href.length > 1) {
+        targetSelector = href;
+      } else if (
+        href.startsWith('/#') &&
+        href.length > 2 &&
+        (currentPath === '/' || currentPath === '')
+      ) {
+        targetSelector = href.substring(1);
+      } else if (href.includes('#')) {
+        const [path, hash] = href.split('#');
+        if ((path === currentPath || (path === '/' && currentPath === '')) && hash) {
+          targetSelector = `#${hash}`;
+        }
+      }
+
+      if (targetSelector) {
+        try {
+          const targetElement = document.querySelector(targetSelector);
+          if (targetElement) {
+            e.preventDefault();
+            lenis.scrollTo(targetElement as HTMLElement, {
+              offset: -85,
+              duration: 1.25,
+            });
+
+            if (window.history.pushState) {
+              window.history.pushState(null, '', targetSelector);
+            }
           }
+        } catch {
+          // Fallback if querySelector fails on complex selector
         }
       }
     };
 
     document.addEventListener('click', handleAnchorClick);
 
-    // Smooth scroll on initial load if URL has anchor hash
+    // Smooth scroll on initial load or hash change
     if (window.location.hash) {
       const initialTarget = document.querySelector(window.location.hash);
       if (initialTarget) {
@@ -84,7 +125,7 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
             offset: -85,
             duration: 1.2,
           });
-        }, 300);
+        }, 350);
       }
     }
 
@@ -95,6 +136,25 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       window.__lenis = undefined;
     };
   }, []);
+
+  // When route switches, reset scroll to top smoothly if no hash
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.__lenis) {
+      if (!window.location.hash) {
+        window.__lenis.scrollTo(0, { immediate: true });
+      } else {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          setTimeout(() => {
+            window.__lenis?.scrollTo(target as HTMLElement, {
+              offset: -85,
+              duration: 1.2,
+            });
+          }, 200);
+        }
+      }
+    }
+  }, [pathname]);
 
   const scrollToTop = () => {
     if (window.__lenis) {
@@ -117,7 +177,10 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
         />
       </div>
 
-      {children}
+      {/* Smooth Page Content Transition */}
+      <div key={pathname} className="flex-1 flex flex-col w-full animate-page-enter">
+        {children}
+      </div>
 
       {/* Floating Smooth Scroll to Top Button */}
       <button

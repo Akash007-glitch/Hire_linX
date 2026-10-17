@@ -4,9 +4,9 @@ import React from 'react';
 
 export const HeroContent: React.FC = () => {
   return (
-    <div className="flex flex-col items-start justify-center max-w-xl text-left z-10">
+    <div className="flex flex-col items-center justify-center max-w-3xl text-center mx-auto z-10">
       {/* Subtitle / Kicker */}
-      <div className="inline-flex items-center gap-2 mb-4 sm:mb-6">
+      <div className="inline-flex items-center justify-center gap-2 mb-4 sm:mb-6">
         <span className="text-slate-300 text-sm sm:text-base font-normal tracking-wide">
           We&apos;re proud of the culture we&apos;ve built
         </span>
