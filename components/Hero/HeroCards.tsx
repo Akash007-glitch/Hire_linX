@@ -53,9 +53,9 @@ const candidateReviews: CandidateReview[] = [
 
 export const HeroCards: React.FC = () => {
   return (
-    <div className="relative w-full max-w-[580px] mx-auto lg:mx-0 min-h-[360px] h-auto lg:h-[500px]">
+    <div className="relative w-full max-w-145 mx-auto lg:mx-0 min-h-90 h-auto lg:h-125">
       {/* Subtle background glow behind cards */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-85 h-85 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Desktop / Large screen staggered positioning */}
       <div className="hidden lg:block relative w-full h-full">

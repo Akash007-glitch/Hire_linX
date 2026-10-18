@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({
   return (
     <footer className="relative w-full bg-[#041528] text-white overflow-hidden pt-16 sm:pt-20 pb-10 border-t border-sky-950/60">
       {/* --- Left Geometric Low-Poly Triangles --- */}
-      <div className="absolute left-0 bottom-0 top-0 w-[260px] sm:w-[340px] pointer-events-none select-none overflow-hidden">
+      <div className="absolute left-0 bottom-0 top-0 w-65 sm:w-85 pointer-events-none select-none overflow-hidden">
         <svg
           viewBox="0 0 340 320"
           preserveAspectRatio="xMinYMax meet"
@@ -58,7 +58,7 @@ export const Footer: React.FC<FooterProps> = ({
       </div>
 
       {/* --- Right Geometric Low-Poly Triangles --- */}
-      <div className="absolute right-0 bottom-0 top-0 w-[260px] sm:w-[360px] pointer-events-none select-none overflow-hidden">
+      <div className="absolute right-0 bottom-0 top-0 w-65 sm:w-90 pointer-events-none select-none overflow-hidden">
         <svg
           viewBox="0 0 360 320"
           preserveAspectRatio="xMaxYMax meet"

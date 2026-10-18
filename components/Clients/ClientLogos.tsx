@@ -1,11 +1,14 @@
 import React from 'react';
+import Image from 'next/image';
 
 // 1. Paytm Logo
 export const YourLogo: React.FC = () => (
   <div className="flex items-center justify-center select-none w-full h-full">
-    <img
+    <Image
       src="/paytm.png"
       alt="Paytm Logo"
+      width={96}
+      height={64}
       className="w-20 sm:w-24 h-auto max-h-14 sm:max-h-16 object-contain"
     />
   </div>
@@ -14,9 +17,11 @@ export const YourLogo: React.FC = () => (
 // 2. Zepto Logo
 export const CircleLogo: React.FC = () => (
   <div className="flex items-center justify-center select-none w-full h-full">
-    <img
+    <Image
       src="/Zepto.png"
       alt="Zepto Logo"
+      width={112}
+      height={52}
       className="w-24 sm:w-28 h-auto max-h-11 sm:max-h-13 object-contain"
     />
   </div>
@@ -25,9 +30,11 @@ export const CircleLogo: React.FC = () => (
 // 3. Swiggy Logo
 export const TrevaLogo: React.FC = () => (
   <div className="flex items-center justify-center select-none w-full h-full">
-    <img
+    <Image
       src="/Swiggy.png"
       alt="Swiggy Logo"
+      width={112}
+      height={52}
       className="w-24 sm:w-28 h-auto max-h-11 sm:max-h-13 object-contain"
     />
   </div>
@@ -36,9 +43,11 @@ export const TrevaLogo: React.FC = () => (
 // 4. Blinkit Logo
 export const DummyUpperLogo: React.FC = () => (
   <div className="flex items-center justify-center select-none w-full h-full">
-    <img
+    <Image
       src="/Blinkit.png"
       alt="Blinkit Logo"
+      width={112}
+      height={52}
       className="w-24 sm:w-28 h-auto max-h-11 sm:max-h-13 object-contain"
     />
   </div>
@@ -47,9 +56,11 @@ export const DummyUpperLogo: React.FC = () => (
 // 5. HDB Logo
 export const DummyLowerLogo: React.FC = () => (
   <div className="flex items-center justify-center select-none w-full h-full">
-    <img
+    <Image
       src="/HDB.png"
       alt="HDB Logo"
+      width={128}
+      height={80}
       className="w-24 sm:w-28 lg:w-32 h-auto max-h-16 sm:max-h-20 object-contain scale-110 sm:scale-115"
     />
   </div>

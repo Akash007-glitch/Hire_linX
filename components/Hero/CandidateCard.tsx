@@ -35,8 +35,8 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({ review }) => {
       <div
         className={`bg-white text-slate-800 ${getClipClass()} p-5 sm:p-6 transition-all duration-200 border border-slate-100/60 ${
           isVertical
-            ? 'flex flex-col items-center text-center w-[165px] sm:w-[185px] md:w-[195px] pt-7 pb-8'
-            : 'flex items-center gap-4 w-[235px] sm:w-[260px] md:w-[275px] py-4 px-5'
+            ? 'flex flex-col items-center text-center w-41.25 sm:w-46.25 md:w-48.75 pt-7 pb-8'
+            : 'flex items-center gap-4 w-58.75 sm:w-65 md:w-68.75 py-4 px-5'
         }`}
       >
         {/* Avatar */}
@@ -54,7 +54,7 @@ export const CandidateCard: React.FC<CandidateCardProps> = ({ review }) => {
             ) : (
               // Inline SVG avatar representation
               <div
-                className="w-full h-full flex items-center justify-center bg-gradient-to-tr from-sky-400 to-blue-500 text-white font-semibold text-lg"
+                className="w-full h-full flex items-center justify-center bg-linear-to-tr from-sky-400 to-blue-500 text-white font-semibold text-lg"
                 dangerouslySetInnerHTML={{ __html: avatar }}
               />
             )}

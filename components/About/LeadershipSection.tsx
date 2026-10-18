@@ -2,27 +2,26 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface Leader {
   name: string;
   role: string;
   image: string;
-  tags: string[];
+  // tags: string[];
 }
 
 const leaders: Leader[] = [
   {
     name: 'Gobinda Mazumder',
     role: 'CEO and founder/managing director',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-    tags: ['Executive Search', 'Org Strategy', 'Fintech'],
+    image: '/P1.png',
+    // tags: ['Executive Search', 'Org Strategy', 'Fintech'],
   },
   {
     name: 'Sangeeta Roy',
     role: 'Director',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
-    tags: ['Candidate Experience', 'Diversity & Inclusion', 'Culture'],
+    image: '/P2.png',
+    // tags: ['Candidate Experience', 'Diversity & Inclusion', 'Culture'],
   },
   // {
   //   name: 'Vikram Sengupta',
@@ -78,7 +77,7 @@ export const LeadershipSection: React.FC = () => {
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071f3d]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#071f3d]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Details */}
@@ -93,7 +92,7 @@ export const LeadershipSection: React.FC = () => {
               </div>
 
               {/* Tags */}
-              <div className="p-6 pt-0 border-t border-sky-100/60 flex flex-wrap gap-1.5 mt-4">
+              {/* <div className="p-6 pt-0 border-t border-sky-100/60 flex flex-wrap gap-1.5 mt-4">
                 {leader.tags.map((tag, idx) => (
                   <span
                     key={idx}
@@ -102,7 +101,7 @@ export const LeadershipSection: React.FC = () => {
                     {tag}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

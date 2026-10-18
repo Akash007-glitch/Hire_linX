@@ -12,8 +12,8 @@ export const WhyUsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Professional Business Meeting Image with Brand Chamfer */}
           <div className="lg:col-span-6 flex justify-center lg:justify-start">
-            <div className="why-us-shadow w-full max-w-[480px]">
-              <div className="relative why-us-img-cut w-full h-[380px] sm:h-[460px] md:h-[500px] lg:h-[520px] overflow-hidden bg-slate-100 border-4 border-white">
+            <div className="why-us-shadow w-full max-w-120">
+              <div className="relative why-us-img-cut w-full h-95 sm:h-115 md:h-125 lg:h-130 overflow-hidden bg-slate-100 border-4 border-white">
                 <Image
                   src="/why-us-team.jpg"
                   alt="Professional recruitment and business meeting at HireLinkx"

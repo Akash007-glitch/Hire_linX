@@ -165,7 +165,7 @@ export const ContactForm: React.FC = () => {
           onChange={handleChange}
           placeholder="How can we help?"
           disabled={status === 'loading'}
-          className="w-full bg-slate-50/80 hover:bg-slate-50 border border-slate-200 focus:border-sky-500 focus:bg-white rounded-xl px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:outline-none resize-none transition-all text-sm sm:text-base disabled:opacity-60"
+          className="w-full bg-slate-50/80 hover:bg-slate-50 border border-slate-200 focus:border-sky-500 focus:bg-white rounded-xl px-4 py-3.5 text-slate-900  focus:outline-none resize-none transition-all text-sm sm:text-base disabled:opacity-60"
         />
       </div>
 

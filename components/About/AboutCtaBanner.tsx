@@ -8,7 +8,7 @@ export const AboutCtaBanner: React.FC = () => {
   return (
     <section className="relative w-full bg-white py-16 sm:py-24 px-6 sm:px-8 lg:px-12 overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
-        <div className="audience-banner-cut bg-gradient-to-br from-[#071f3d] via-[#092a54] to-[#041528] text-white p-8 sm:p-14 lg:p-16 shadow-[0_20px_50px_rgba(7,31,61,0.25)] relative overflow-hidden">
+        <div className="audience-banner-cut bg-linear-to-br from-[#071f3d] via-[#092a54] to-[#041528] text-white p-8 sm:p-14 lg:p-16 shadow-[0_20px_50px_rgba(7,31,61,0.25)] relative overflow-hidden">
           {/* Background Facet Geometry */}
           <div className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none opacity-20">
             <svg viewBox="0 0 400 400" className="w-full h-full object-cover">

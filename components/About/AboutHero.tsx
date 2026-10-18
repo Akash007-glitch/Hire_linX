@@ -8,8 +8,8 @@ export const AboutHero: React.FC = () => {
   return (
     <section className="relative min-h-[85vh] w-full flex items-center justify-center overflow-hidden pt-32 sm:pt-36 lg:pt-40 pb-20 bg-[#071f3d]">
       {/* Dynamic ambient gradients */}
-      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-sky-600/15 blur-[140px] pointer-events-none" />
-      <div className="absolute -bottom-20 right-0 w-[700px] h-[700px] rounded-full bg-blue-600/20 blur-[160px] pointer-events-none" />
+      <div className="absolute -top-40 -left-40 w-150 h-150 rounded-full bg-sky-600/15 blur-[140px] pointer-events-none" />
+      <div className="absolute -bottom-20 right-0 w-175 h-175 rounded-full bg-blue-600/20 blur-[160px] pointer-events-none" />
 
       {/* SVG Geometric Low-Poly Facet Overlay */}
       <svg

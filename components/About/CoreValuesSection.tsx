@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Eye, Zap, Handshake, HeartHandshake, ShieldAlert, Award } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 interface ValueCard {
   number: string;
@@ -66,8 +66,8 @@ export const CoreValuesSection: React.FC = () => {
   return (
     <section className="relative w-full bg-[#05182e] text-white py-20 sm:py-28 lg:py-32 overflow-hidden border-t border-sky-950/70">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full bg-sky-600/10 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-[600px] h-[600px] rounded-full bg-blue-600/15 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 -left-40 w-125 h-125 rounded-full bg-sky-600/10 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-150 h-150 rounded-full bg-blue-600/15 blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Heading */}
@@ -92,7 +92,7 @@ export const CoreValuesSection: React.FC = () => {
           {values.map((val) => (
             <div
               key={val.number}
-              className="card-cut-br bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-white/[0.08] p-8 sm:p-10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between group"
+              className="card-cut-br bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-white/8 p-8 sm:p-10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">

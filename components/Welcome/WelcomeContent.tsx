@@ -24,7 +24,7 @@ export const WelcomeContent: React.FC = () => {
           href="#careers"
           className="btn-cut-br bg-[#2373F4] hover:bg-[#6298ee] text-white font-medium text-sm sm:text-base px-8 py-3.5 transition-all duration-200 shadow-md hover:shadow-lg active:translate-y-0.5 inline-flex items-center justify-center cursor-pointer"
         >
-          Find a Job
+          Get Started
         </Link>
       </div>
     </div>

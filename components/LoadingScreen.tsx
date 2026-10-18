@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 export const LoadingScreen: React.FC = () => {
   const [initialLoading, setInitialLoading] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   const pathname = usePathname();
   const [routeTransitioning, setRouteTransitioning] = useState(false);
@@ -19,7 +18,6 @@ export const LoadingScreen: React.FC = () => {
       // Smoothly advance progress with non-linear easing
       const step = Math.max(2, Math.floor((100 - currentProgress) / 5));
       currentProgress = Math.min(100, currentProgress + step);
-      setProgress(currentProgress);
 
       if (currentProgress >= 100) {
         clearInterval(interval);
@@ -38,11 +36,16 @@ export const LoadingScreen: React.FC = () => {
   // Smooth route transition when switching between pages
   useEffect(() => {
     if (!initialLoading) {
-      setRouteTransitioning(true);
+      const startTimer = setTimeout(() => {
+        setRouteTransitioning(true);
+      }, 0);
       const timer = setTimeout(() => {
         setRouteTransitioning(false);
       }, 450);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(startTimer);
+        clearTimeout(timer);
+      };
     }
   }, [pathname, initialLoading]);
 
@@ -53,14 +56,14 @@ export const LoadingScreen: React.FC = () => {
         <div
           id="hirelinkx-loader"
           aria-hidden={!initialLoading}
-          className={`fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#071f3d] transition-all duration-700 ease-out select-none ${isFadingOut
+          className={`fixed inset-0 z-99999 flex flex-col items-center justify-center bg-[#071f3d] transition-all duration-700 ease-out select-none ${isFadingOut
               ? 'opacity-0 pointer-events-none scale-105'
               : 'opacity-100 pointer-events-auto scale-100'
             }`}
         >
           {/* Ambient Glowing Blobs */}
-          <div className="absolute w-[450px] h-[450px] rounded-full bg-sky-500/15 blur-[120px] pointer-events-none animate-pulse" />
-          <div className="absolute w-[350px] h-[350px] rounded-full bg-blue-600/20 blur-[130px] pointer-events-none" />
+          <div className="absolute w-112.5 h-112.5 rounded-full bg-sky-500/15 blur-[120px] pointer-events-none animate-pulse" />
+          <div className="absolute w-87.5 h-87.5 rounded-full bg-blue-600/20 blur-[130px] pointer-events-none" />
 
           {/* Low-Poly Facet SVG Backdrop */}
           <svg
@@ -80,7 +83,7 @@ export const LoadingScreen: React.FC = () => {
             {/* Logo with rotating ambient gradient ring */}
             <div className="relative mb-6">
               {/* Outer Glowing Gradient Ring */}
-              <div className="absolute -inset-3 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-sky-400 via-[#2373F4] to-cyan-300 opacity-70 blur-md animate-spin [animation-duration:4s]" />
+              <div className="absolute -inset-3 rounded-2xl sm:rounded-3xl bg-linear-to-tr from-sky-400 via-[#2373F4] to-cyan-300 opacity-70 blur-md animate-spin [animation-duration:4s]" />
 
               {/* Logo Frame */}
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl sm:rounded-3xl bg-[#041528] border-2 border-white/20 p-2 shadow-[0_15px_40px_rgba(0,0,0,0.5)] flex items-center justify-center">
@@ -127,10 +130,10 @@ export const LoadingScreen: React.FC = () => {
       {/* --- High-Velocity Top Bar for Route Switching --- */}
       {routeTransitioning && (
         <div
-          className="fixed top-0 left-0 right-0 h-[3px] z-[99998] pointer-events-none"
+          className="fixed top-0 left-0 right-0 h-0.75 z-99998 pointer-events-none"
           aria-hidden="true"
         >
-          <div className="h-full bg-gradient-to-r from-sky-400 via-[#2373F4] to-cyan-300 shadow-[0_0_16px_rgba(56,189,248,0.9)] animate-pulse" />
+          <div className="h-full bg-linear-to-r from-sky-400 via-[#2373F4] to-cyan-300 shadow-[0_0_16px_rgba(56,189,248,0.9)] animate-pulse" />
         </div>
       )}
     </>

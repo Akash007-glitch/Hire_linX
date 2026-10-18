@@ -16,28 +16,28 @@ const whyUsItems: WhyUsItem[] = [
     title: 'Tailored Recruitment Solutions',
     description:
       'We understand that every business has unique hiring needs. We help identify suitable candidates based on your requirements.',
-    icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2]" />,
+    icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-2" />,
   },
   {
     id: 'quality-focused',
     title: 'Quality-Focused Hiring',
     description:
       'We focus on candidate qualifications, skills, and suitability to help businesses find the right talent.',
-    icon: <BadgeCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2]" />,
+    icon: <BadgeCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-2" />,
   },
   {
     id: 'client-support',
     title: 'Dedicated Client Support',
     description:
       'We work closely with employers to understand their requirements and provide support throughout the recruitment process.',
-    icon: <Handshake className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2]" />,
+    icon: <Handshake className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-2" />,
   },
   {
     id: 'hr-services',
     title: 'Comprehensive HR Services',
     description:
       'From talent acquisition to payroll management and HR administration, we support businesses with their workforce needs.',
-    icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2]" />,
+    icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-2" />,
   },
 ];
 

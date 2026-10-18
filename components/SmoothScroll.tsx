@@ -168,11 +168,11 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     <>
       {/* Sleek Top Scroll Progress Indicator */}
       <div
-        className="fixed top-0 left-0 right-0 h-[3px] bg-transparent z-[9999] pointer-events-none"
+        className="fixed top-0 left-0 right-0 h-0.75 bg-transparent z-9999 pointer-events-none"
         aria-hidden="true"
       >
         <div
-          className="h-full bg-gradient-to-r from-sky-400 via-[#2373F4] to-cyan-400 transition-all duration-75 ease-out shadow-[0_0_12px_rgba(35,115,244,0.7)]"
+          className="h-full bg-linear-to-r from-sky-400 via-[#2373F4] to-cyan-400 transition-all duration-75 ease-out shadow-[0_0_12px_rgba(35,115,244,0.7)]"
           style={{ width: `${Math.min(100, Math.max(0, scrollProgress * 100))}%` }}
         />
       </div>

@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
                 unoptimized
               />
             </div>
-            <span className="text-base sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors truncate max-w-[155px] sm:max-w-none">
+            <span className="text-base sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors truncate max-w-38.75 sm:max-w-none">
               HireLinkx Solutions
             </span>
           </Link>

@@ -19,7 +19,7 @@ export const JoinCtaBanner: React.FC<JoinCtaBannerProps> = ({
   return (
     <div className="relative w-full bg-[#041528] overflow-hidden py-16 sm:py-20 lg:py-24 px-6 sm:px-12 flex items-center justify-center">
       {/* --- Left Geometric Low-Poly Triangles --- */}
-      <div className="absolute left-0 top-0 bottom-0 w-[240px] sm:w-[320px] lg:w-[400px] pointer-events-none select-none">
+      <div className="absolute left-0 top-0 bottom-0 w-60 sm:w-80 lg:w-100 pointer-events-none select-none">
         <svg
           viewBox="0 0 400 300"
           preserveAspectRatio="xMinYMid meet"
@@ -50,7 +50,7 @@ export const JoinCtaBanner: React.FC<JoinCtaBannerProps> = ({
       </div>
 
       {/* --- Right Geometric Low-Poly Triangles --- */}
-      <div className="absolute right-0 top-0 bottom-0 w-[220px] sm:w-[300px] lg:w-[380px] pointer-events-none select-none">
+      <div className="absolute right-0 top-0 bottom-0 w-55 sm:w-75 lg:w-95 pointer-events-none select-none">
         <svg
           viewBox="0 0 380 300"
           preserveAspectRatio="xMaxYMid meet"
