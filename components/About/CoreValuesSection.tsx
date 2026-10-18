@@ -73,7 +73,7 @@ export const CoreValuesSection: React.FC = () => {
         {/* Section Heading */}
         <div className="max-w-3xl mb-14 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 backdrop-blur-md mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+            {/* <span className="w-1.5 h-1.5 rounded-full bg-sky-400" /> */}
             <span className="text-xs font-bold uppercase tracking-wider text-sky-300">
               Our Core DNA
             </span>
@@ -118,8 +118,8 @@ export const CoreValuesSection: React.FC = () => {
               <div className="border-t border-white/10 pt-5 space-y-2.5">
                 {val.bulletPoints.map((point, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
-                    <span>{point}</span>
+                    {/* <span className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <span>{point}</span> */}
                   </div>
                 ))}
               </div>

@@ -31,7 +31,7 @@ export const AboutHero: React.FC = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-center text-center">
         {/* Breadcrumb & Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/25 backdrop-blur-md mb-6 sm:mb-8">
-          <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+          {/* <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" /> */}
           <span className="text-xs sm:text-sm font-semibold tracking-wider text-sky-200 uppercase">
             About HireLinkx Solutions
           </span>
