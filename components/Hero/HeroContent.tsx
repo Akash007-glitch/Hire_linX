@@ -9,7 +9,6 @@ export const HeroContent: React.FC = () => {
       {/* Eyebrow / Kicker */}
       <div className="inline-flex items-center justify-center mb-5 sm:mb-6 hero-animate-fade-up">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/25 backdrop-blur-xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
           <span className="text-xs sm:text-sm font-semibold tracking-[0.22em] text-sky-300 uppercase">
             OUR CULTURE
           </span>
@@ -17,7 +16,7 @@ export const HeroContent: React.FC = () => {
       </div>
 
       {/* Main Headline */}
-      <h1 className="max-w-[750px] w-full mx-auto text-[34px] sm:text-[48px] md:text-[52px] lg:text-[62px] font-bold text-white tracking-tight leading-[1.14] sm:leading-[1.12] lg:leading-[1.08] mb-8 sm:mb-10">
+      <h1 className="max-w-187.5 w-full mx-auto text-[34px] sm:text-[48px] md:text-[52px] lg:text-[62px] font-bold text-white tracking-tight leading-[1.14] sm:leading-[1.12] lg:leading-[1.08] mb-8 sm:mb-10">
         <span className="block font-sans font-extrabold text-white hero-animate-fade-up [animation-delay:100ms]">
           Built on Trust.
         </span>

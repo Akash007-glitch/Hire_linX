@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Award } from 'lucide-react';
 
 interface ValueCard {
   number: string;
@@ -99,9 +98,6 @@ export const CoreValuesSection: React.FC = () => {
                   <span className="text-3xl sm:text-4xl font-mono font-extrabold text-sky-400/80 group-hover:text-sky-300 transition-colors">
                     {val.number}
                   </span>
-                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-300 group-hover:scale-110 transition-transform">
-                    <Award className="w-5 h-5" />
-                  </div>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-2">

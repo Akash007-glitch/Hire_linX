@@ -50,11 +50,11 @@ export default function Home() {
                   <p className="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wide">Candidate Satisfaction</p>
                 </div>
                 <div>
-                  <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">2.5k+</p>
+                  <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">150+</p>
                   <p className="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wide">Talents Placed</p>
                 </div>
                 <div>
-                  <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">150+</p>
+                  <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">5+</p>
                   <p className="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wide">Partner Companies</p>
                 </div>
               </div>

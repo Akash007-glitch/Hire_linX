@@ -67,19 +67,17 @@ export const DummyLowerLogo: React.FC = () => (
 );
 
 // // 6. SIKKA (Cyan circle cross mark + uppercase bold)
-// export const SikkaLogo: React.FC = () => (
-//   <div className="flex items-center gap-2 select-none">
-//     <div className="w-5 h-5 rounded-full bg-[#00bcd4] flex items-center justify-center text-white">
-//       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-//         <line x1="12" y1="5" x2="12" y2="19" />
-//         <line x1="5" y1="12" x2="19" y2="12" />
-//       </svg>
-//     </div>
-//     <span className="text-base sm:text-lg font-extrabold tracking-widest text-slate-900">
-//       SIKKA
-//     </span>
-//   </div>
-// );
+export const SnabbitLogo: React.FC = () => (
+  <div className="flex items-center justify-center select-none w-full h-full">
+    <Image
+      src="/snabbit.png"
+      alt="Snabbit Logo"
+      width={128}
+      height={80}
+      className="w-24 sm:w-28 lg:w-32 h-auto max-h-16 sm:max-h-20 object-contain"
+    />
+  </div>
+);
 
 // // 7. gemstone (Wireframe diamond + lowercase text)
 // export const GemstoneLogo: React.FC = () => (

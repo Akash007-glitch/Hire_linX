@@ -11,7 +11,7 @@ export const OurStorySection: React.FC = () => {
         {/* Section Heading */}
         <div className="max-w-3xl mb-14 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200/80 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
+
             <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
               Our Genesis & Purpose
             </span>

@@ -11,7 +11,7 @@ const navLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Why Us', href: '/#why-us' },
-  { label: 'Careers', href: '/#careers' },
+  // { label: 'Careers', href: '/#careers' },
   { label: 'Contact Us', href: '/#contact-us' },
 ];
 
@@ -75,8 +75,8 @@ export const Navbar: React.FC = () => {
                   key={link.label}
                   href={link.href}
                   className={`px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-150 ${isActive
-                      ? 'text-sky-600 font-semibold bg-sky-50'
-                      : 'text-slate-700 hover:text-sky-600 hover:bg-slate-100/70'
+                    ? 'text-sky-600 font-semibold bg-sky-50'
+                    : 'text-slate-700 hover:text-sky-600 hover:bg-slate-100/70'
                     }`}
                 >
                   {link.label}
@@ -129,8 +129,8 @@ export const Navbar: React.FC = () => {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive
-                      ? 'bg-sky-50 text-sky-600 font-semibold'
-                      : 'text-slate-800 hover:bg-sky-50 hover:text-sky-600'
+                    ? 'bg-sky-50 text-sky-600 font-semibold'
+                    : 'text-slate-800 hover:bg-sky-50 hover:text-sky-600'
                     }`}
                 >
                   {link.label}

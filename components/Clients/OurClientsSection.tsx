@@ -7,6 +7,7 @@ import {
   TrevaLogo,
   DummyUpperLogo,
   DummyLowerLogo,
+  SnabbitLogo,
   // SikkaLogo,
   // GemstoneLogo,
   // WormifyLogo,
@@ -20,7 +21,7 @@ const clientLogos = [
   { id: 'treva', component: <TrevaLogo /> },
   { id: 'dummy-upper', component: <DummyUpperLogo /> },
   { id: 'dummy-lower', component: <DummyLowerLogo /> },
-  // { id: 'sikka', component: <SikkaLogo /> },
+  { id: 'sikkalogo', component: <SnabbitLogo /> },
   // { id: 'gemstone', component: <GemstoneLogo /> },
   // { id: 'wormify', component: <WormifyLogo /> },
   // { id: 'musikal', component: <MusikalLogo /> },
@@ -36,8 +37,8 @@ export const OurClientsSection: React.FC = () => {
           Our Partners
         </h2>
 
-        {/* 10 Logo Cards Grid: 2 rows of 5 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
+        {/* 6 Logo Cards Grid: straight line on tablet and desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5">
           {clientLogos.map((client) => (
             <div
               key={client.id}

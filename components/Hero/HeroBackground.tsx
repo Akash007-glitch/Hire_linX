@@ -10,7 +10,7 @@ export const HeroBackground: React.FC = () => {
       <div className="absolute -bottom-20 right-0 w-175 h-175 rounded-full bg-blue-600/15 blur-[160px]" />
 
       {/* Restrained subtle glow positioned directly behind the hero heading */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[580px] lg:w-[720px] h-[240px] sm:h-[340px] lg:h-[400px] bg-sky-400/10 rounded-full blur-[110px] pointer-events-none hero-glow-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-85 sm:w-145 lg:w-180 h-60 sm:h-85 lg:h-100 bg-sky-400/10 rounded-full blur-[110px] pointer-events-none hero-glow-pulse" />
 
       {/* SVG Geometric Low-Poly & Triangle Mesh */}
       <svg
