@@ -103,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({
                 {[
                   { icon: <FacebookIcon className="w-4 h-4" />, label: 'Facebook', href: '#' },
                   { icon: <LinkedinIcon className="w-4 h-4" />, label: 'LinkedIn', href: '#' },
-                  { icon: <InstagramIcon className="w-4 h-4" />, label: 'Instagram', href: '#' },
+                  { icon: <InstagramIcon className="w-4 h-4" />, label: 'Instagram', href: 'https://www.instagram.com/hirelinkx_solutions_pvt_ltd/' },
                 ].map((social, idx) => (
                   <Link
                     key={idx}
@@ -186,7 +186,7 @@ export const Footer: React.FC<FooterProps> = ({
                 'Company Profile',
                 'Sustainability',
                 'Corporate Governance',
-                `${brandName} Innovation Fund`,
+                // `${brandName} Innovation Fund`,
                 'Our Vision & Values',
               ].map((item, idx) => (
                 <li key={idx}>
