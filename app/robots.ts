@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://hirelinkxsolutions.com/sitemap.xml',
+    sitemap: 'https://www.hirelinkxsolutions.com/sitemap.xml',
   }
 }
