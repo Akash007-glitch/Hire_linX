@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hirelinkx.com';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "HireLinkx Solutions | Culture, Transparency & Top Talent",
   description: "One That Values Transparency, Innovation and Collaboration. Discover career opportunities with HireLinkx Solutions.",
   icons: {
