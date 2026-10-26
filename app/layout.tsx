@@ -14,12 +14,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hirelinkx.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hirelinkxsolutions.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "HireLinkx Solutions | Culture, Transparency & Top Talent",
-  description: "One That Values Transparency, Innovation and Collaboration. Discover career opportunities with HireLinkx Solutions.",
+  title: 'HireLinkx Solutions | Recruitment and Career Services',
+  description:
+    'Discover HireLinkx Solutions and explore our recruitment, hiring, and career services.',
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

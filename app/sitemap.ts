@@ -1,15 +1,16 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next'
+
+const baseUrl = 'https://hirelinkxsolutions.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hirelinkxsolutions.com').replace(/\/$/, '');
-  const lastModified = new Date();
+  const lastModified = new Date()
 
   return [
     {
-      url: `${baseUrl}/`,
+      url: baseUrl,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 1,
     },
     {
       url: `${baseUrl}/about`,
@@ -23,5 +24,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-  ];
+  ]
 }
