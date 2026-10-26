@@ -19,13 +19,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hirelinkxsoluti
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'HireLinkx Solutions | Recruitment and Career Services',
+    default: 'HireLinkx Solutions | Official Website',
     template: '%s | HireLinkx Solutions',
   },
   description:
-    'HireLinkx Solutions connects businesses with talent through recruitment and career services. Explore our services and discover how we help employers and job seekers.',
+    'Visit the official website of HireLinkx Solutions to explore our recruitment, hiring, and career services.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.hirelinkxsolutions.com',
   },
   robots: {
     index: true,
